@@ -18,28 +18,16 @@ public class JavaLoops {
 	}
 	
 	public static void main(String []args){
-		
         Scanner in = new Scanner(System.in);
         while(in.hasNext()){
         	String line = in.nextLine();
         	if(! line.isEmpty() ) {
-        		System.out.println("line: " + line);
         		String[] values = line.split("\\s");
-        		
         		if ( values.length == 1 || values.length == 3 ) {
-        			
-        			System.out.println("values.length: " + values.length);
-
         			int start = Integer.parseInt(values[0]);
-        			System.out.println("start: " + start);
-
         			if ( values.length == 3 ) {
         				int constant = Integer.parseInt(values[1]);
-        				System.out.println("constant: " + constant);
-        				
         				int limit = Integer.parseInt(values[2]);
-        				System.out.println("limit: " + limit);
-        				
     					reducer(start, constant, 1, 1, limit, 0);
         			}
         		}
